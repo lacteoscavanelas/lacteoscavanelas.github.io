@@ -1,0 +1,20 @@
+{
+  "name": "Visitas · Lácteos Cavanelas",
+  "short_name": "Visitas",
+  "description": "Carga de visitas, seguimiento y funnel de ventas para los vendedores de Lácteos Cavanelas.",
+  "id": "./",
+  "start_url": "./#cargar",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF3F6",
+  "theme_color": "#1F5FA8",
+  "lang": "es-AR",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

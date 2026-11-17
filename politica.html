@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de privacidad · Visitas Lácteos Cavanelas</title>
+<style>
+:root{
+  --bg:#EEF3F6; --surface:#FFFFFF; --ink:#13293D; --muted:#5B6B7A; --line:#D5DEE5;
+  --accent:#1F5FA8; --accent-soft:#E1ECF8; --go:#1E7D4F; --go-ink:#FFFFFF; --go-soft:#E2F2EA;
+  --warn:#B5541B; --warn-soft:#FBEDE3; --late:#B42318; --late-soft:#FDECEA; --pause:#8A7A66;
+  --paso-ink:#FFFFFF;
+  --font:"Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-d:"Barlow Semi Condensed", "Barlow", system-ui, sans-serif;
+  --nav-h:62px;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1A24; --surface:#162633; --ink:#E6EEF4; --muted:#93A4B2; --line:#2A3D4C;
+  --accent:#6FA8E8; --accent-soft:#1C3550; --go:#3FA673; --go-ink:#06170F; --go-soft:#173326;
+  --warn:#E3925E; --warn-soft:#3A2618; --late:#F28B82; --late-soft:#3B1C1A; --pause:#B8A894; --paso-ink:#081521; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0E1A24; --surface:#162633; --ink:#E6EEF4; --muted:#93A4B2; --line:#2A3D4C;
+  --accent:#6FA8E8; --accent-soft:#1C3550; --go:#3FA673; --go-ink:#06170F; --go-soft:#173326;
+  --warn:#E3925E; --warn-soft:#3A2618; --late:#F28B82; --late-soft:#3B1C1A; --pause:#B8A894; --paso-ink:#081521; color-scheme:dark;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:680px;margin:0 auto;padding:16px 16px calc(var(--nav-h) + 30px)}
+header.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+header.top h1{font-family:var(--font-d);font-size:1.7rem;line-height:1.1;margin:0}
+header.top .who{color:var(--muted);font-size:.92rem;text-align:right}
+.conn{font-size:.92rem;color:var(--warn);background:var(--warn-soft);border-radius:10px;padding:10px 12px;margin-bottom:14px}
+.conn[hidden]{display:none}
+.view{display:none}.view.on{display:block}
+h2.sec{font-family:var(--font-d);font-size:1.2rem;margin:22px 0 8px}
+.muted{color:var(--muted)} .small{font-size:.88rem}
+
+/* Cargar */
+.ia{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:18px}
+.ia textarea{min-height:84px;border:0;padding:4px;background:transparent;box-shadow:none}
+.ia textarea:focus{box-shadow:none}
+.ia .row{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.ia .row .st{margin-right:auto;font-size:.88rem;color:var(--muted)}
+.cola{font-size:.9rem;background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:8px 12px;margin-bottom:14px}
+.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+.tipo{appearance:none;border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:14px;padding:12px 6px 10px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:86px;justify-content:center}
+.tipo svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tipo span{font-family:var(--font-d);font-weight:700;font-size:1.02rem;line-height:1.1}
+.tipo[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+fieldset{border:0;margin:0 0 16px;padding:0}
+legend,.lbl{font-weight:600;font-size:.95rem;margin-bottom:6px;display:block;padding:0}
+.opt{color:var(--muted);font-weight:400}
+.field{margin-bottom:14px}
+input[type=text],input[type=tel],input[type=date],input[type=search],input[type=number],select,textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-height:46px}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:440px){.row2{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{appearance:none;font:inherit;font-size:.95rem;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 13px;cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.hint{color:var(--muted);font-size:.86rem;margin-top:5px}
+.preview{border-left:4px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;padding:12px 14px;margin:6px 0 16px}
+.preview .et{font-family:var(--font-d);font-weight:700;font-size:1.1rem}
+.preview .px{margin-top:4px}
+.preview .hz{margin-top:6px;color:var(--muted);font-size:.93rem}
+.preview .al{margin-top:6px;color:var(--warn);font-size:.9rem}
+.btn{appearance:none;font:inherit;font-weight:600;border-radius:12px;border:0;padding:12px 16px;cursor:pointer;min-height:46px}
+.btn-go{width:100%;background:var(--go);color:var(--go-ink);font-size:1.06rem;min-height:52px}
+.btn-go:disabled{opacity:.55;cursor:default}
+.btn-ia{background:var(--accent);color:#fff}
+.btn-ia:disabled{opacity:.55}
+.btn-line{background:transparent;color:var(--accent);border:1.5px solid var(--line)}
+.btn-sm{min-height:38px;padding:6px 12px;font-size:.92rem}
+.mic{width:46px;height:46px;border-radius:50%;padding:0;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent)}
+.mic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.mic[hidden]{display:none}
+.mic[aria-pressed="true"]{background:var(--late);color:#fff}
+.btn:focus-visible,.tipo:focus-visible,.chip:focus-visible,nav a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* Agenda */
+.metas{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.meta{display:grid;grid-template-columns:1fr auto;gap:2px 10px;margin-bottom:10px}
+.meta:last-child{margin-bottom:0}
+.meta .n{font-weight:600}
+.bar{grid-column:1/-1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--go);border-radius:99px}
+.alerta{background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:10px 12px;margin-bottom:14px;font-size:.95rem}
+.tip{background:var(--accent-soft);color:var(--ink);border-radius:12px;padding:10px 12px;margin-bottom:14px;font-size:.93rem}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.seg button{appearance:none;border:0;background:transparent;font:inherit;font-weight:600;padding:8px 14px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.item{display:grid;grid-template-columns:auto 1fr auto;gap:2px 10px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin-bottom:8px;cursor:pointer;width:100%;text-align:left;font:inherit;color:inherit}
+.item .ord{font-family:var(--font-d);font-weight:700;color:var(--muted);min-width:1.4em}
+.item .nm{font-weight:700}
+.item .dt{font-size:.85rem;font-weight:600;white-space:nowrap}
+.item .dt.late{color:var(--late)} .item .dt.today{color:var(--warn)}
+.item .sub{grid-column:2/-1;color:var(--muted);font-size:.9rem}
+.item .hz{grid-column:2/-1;font-size:.92rem}
+.zona{font-family:var(--font-d);font-weight:700;font-size:1.05rem;margin:16px 0 6px}
+.empty{text-align:center;color:var(--muted);padding:30px 12px}
+.empty strong{display:block;color:var(--ink);font-size:1.08rem;margin-bottom:4px}
+
+/* Funnel */
+.embudo{display:flex;flex-direction:column;align-items:center;gap:4px;margin:8px 0 6px}
+.paso{appearance:none;border:0;font:inherit;color:var(--paso-ink);background:var(--accent);border-radius:8px;padding:8px 12px;display:flex;justify-content:space-between;cursor:pointer;min-height:40px;align-items:center}
+.paso b{font-family:var(--font-d);font-size:1.1rem}
+.paso[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.paso.esp{background:var(--pause)}
+.paso.vacio{background:var(--accent-soft);color:var(--muted)}
+.especiales{display:flex;gap:6px;justify-content:center;margin:8px 0 14px;flex-wrap:wrap}
+.especiales .paso{width:auto;min-width:110px;gap:12px}
+details.fc{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+details.fc summary{list-style:none;cursor:pointer;padding:11px 12px;display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+details.fc summary::-webkit-details-marker{display:none}
+details.fc .body{padding:0 12px 12px;border-top:1px solid var(--line)}
+dl.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:10px 0;font-size:.94rem}
+dl.kv dt{color:var(--muted)} dl.kv dd{margin:0;word-break:break-word}
+.hist{font-size:.9rem;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.hist div{margin-bottom:4px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.acts select{width:auto;min-height:38px;padding:6px 10px;font-size:.95rem}
+
+/* Informe */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+@media (max-width:480px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.kpi b{display:block;font-family:var(--font-d);font-size:1.6rem;line-height:1.1}
+.kpi span{color:var(--muted);font-size:.85rem}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:560px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--muted);font-size:.85rem}
+tr:last-child td{border-bottom:0}
+td.bad{color:var(--late);font-weight:600}
+.lista div{padding:6px 0;border-bottom:1px solid var(--line)} .lista div:last-child{border-bottom:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h3{font-family:var(--font-d);font-size:1.1rem;margin:0 0 8px}
+.filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filtros select{width:auto}
+
+/* Ajustes */
+.edit table{min-width:640px}
+.edit td{padding:4px}
+.edit input,.edit select{min-height:38px;padding:6px 8px;font-size:.95rem}
+.edit td input[type=number]{width:70px}
+.x{appearance:none;border:0;background:transparent;color:var(--late);font-size:1.2rem;cursor:pointer;padding:4px 8px}
+.inline{display:flex;gap:8px}.inline input{flex:1}
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--nav-h) + 14px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--surface);padding:12px 16px;border-radius:12px;font-size:.95rem;max-width:calc(100% - 32px);width:max-content;z-index:30;display:none}
+.toast.show{display:block}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav.tabs .in{max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);height:var(--nav-h)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:600;position:relative}
+nav.tabs a svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs a[aria-current="page"]{color:var(--accent)}
+nav.tabs .badge{position:absolute;top:7px;left:calc(50% + 6px);background:var(--late);color:#fff;border-radius:999px;font-size:.68rem;padding:0 5px;line-height:1.5}
+@media (prefers-reduced-motion:no-preference){.tipo,.chip,.bar i{transition:background-color .15s,border-color .15s,width .3s}}
+
+/* Login */
+#login{position:fixed;inset:0;z-index:40;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+#login[hidden]{display:none}
+#login .box{width:100%;max-width:380px}
+#login .marca{font-family:var(--font-d);font-size:2.2rem;line-height:1.05;margin:0 0 6px}
+#login p{color:var(--muted);margin:0 0 22px}
+#login .err{color:var(--late);min-height:1.4em;font-size:.95rem;margin:8px 0 0}
+.pend{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;margin-bottom:12px;font-size:.92rem;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.pend[hidden]{display:none}
+
+.doc{max-width:680px;margin:0 auto;padding:24px 18px 48px;line-height:1.55}
+.doc h1{font-family:var(--font-d);font-size:1.8rem;margin:0 0 4px}.doc h2{font-family:var(--font-d);font-size:1.15rem;margin:24px 0 6px}
+.doc p,.doc li{max-width:68ch}.doc a{color:var(--accent)}</style></head>
+<body><main class="doc">
+<h1>Política de privacidad</h1>
+<p class="muted">App “Visitas · Lácteos Cavanelas” · Vigente desde el 10 de noviembre de 2026</p>
+<p>Esta app es una herramienta interna de RODRIGUEZ Y PARISE SRL (Lácteos Cavanelas), Tres Sargentos 1626, Avellaneda, Buenos Aires, Argentina. La usan únicamente sus vendedores y administradores, con un usuario y contraseña que entrega la empresa. No está destinada al público ni a menores de edad.</p>
+<h2>Qué datos se cargan</h2>
+<ul>
+<li>Del vendedor: su nombre de usuario y la fecha y hora de cada carga.</li>
+<li>De los comercios visitados: nombre del comercio, nombre y teléfono de la persona de contacto, dirección, zona, resultado de la visita, observaciones comerciales y fecha del próximo contacto. Estos datos los escribe o dicta el vendedor.</li>
+<li>De los clientes de la empresa: datos comerciales que ya están en los sistemas de la empresa (código, nombre, dirección, teléfono, condición de pago, lista de precios, compras, pagos y saldo de cuenta corriente), para que el vendedor gestione la visita y la cobranza.</li>
+</ul>
+<p>La app no accede a la ubicación, los contactos, las fotos ni los archivos del teléfono, y no usa publicidad ni herramientas de seguimiento.</p>
+<h2>Micrófono</h2>
+<p>Si el vendedor toca el botón de dictado, el navegador del teléfono (Google Chrome) convierte su voz en texto con el servicio de reconocimiento de voz de Google. La app recibe solo el texto; no graba ni guarda audio.</p>
+<h2>Dónde se guardan y quién los ve</h2>
+<p>Los datos se envían por conexión cifrada (HTTPS) a planillas de Google Sheets de la empresa, a través de Google Apps Script. Cada vendedor ve solo sus propias cargas; los administradores de la empresa ven todas. El texto que el vendedor pide interpretar con el botón “Completar con IA” se procesa con Gemini, el servicio de inteligencia artificial de Google, solo para completar el formulario.</p>
+<p>La empresa no vende ni comparte estos datos con terceros. Además de Google como proveedor de los servicios mencionados, no hay otros destinatarios.</p>
+<h2>Calendario</h2>
+<p>Si el vendedor lo elige, la app agenda sus próximos contactos en su propio Google Calendar (fecha, comercio, dirección y qué hacer). Para eso el vendedor comparte su calendario con la cuenta de la empresa y lo puede dejar de compartir cuando quiera.</p>
+<h2>En el teléfono</h2>
+<p>La app guarda en el propio teléfono la sesión y una copia de los datos del vendedor para poder funcionar sin señal. Se borran al tocar “Cerrar sesión”.</p>
+<h2>Conservación y derechos</h2>
+<p>Los datos se conservan mientras sean necesarios para la gestión comercial de la empresa. Cualquier persona cuyos datos estén cargados (vendedores o contactos de comercios) puede pedir verlos, corregirlos o eliminarlos escribiendo a <a href="mailto:rodriguezmaximoagustin@gmail.com">rodriguezmaximoagustin@gmail.com</a>, conforme a la Ley 25.326 de Protección de Datos Personales.</p>
+<h2>Cambios</h2>
+<p>Si esta política cambia, se publicará la nueva versión en esta misma página.</p>
+<p><a href="./">Volver a la app</a></p>
+</main></body></html>
